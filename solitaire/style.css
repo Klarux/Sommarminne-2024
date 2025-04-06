@@ -1,0 +1,143 @@
+:root {
+    --darkrosered:#4f002c;
+
+    --skyblue:#689eef;
+    --shadedskyblue:rgb(81, 114, 177); 
+
+    --darkblue:#102044;
+
+    --lightmoongreen:#90af94;
+    --shadedmoongreen:#6f8872;
+
+    --darkgrey:rgb(41, 37, 37);
+    --lightgrey:rgb(81, 81, 81);
+
+    --ultradarkgreen:#092904;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--lightmoongreen);
+    color:var(--darkgrey);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.select-disabled {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+button {
+    margin-bottom: 0.5rem;
+}
+
+.dim {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.dim section {
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(165, 125, 125);
+    padding: 2rem;
+    width: 40%;
+    border-radius: 1rem;
+    h3 {
+        margin-top: 0;  
+    }
+    p {
+        text-wrap: balance;
+    }
+    button {
+        margin-bottom: 0;
+        background-color: rgb(199, 173, 133);
+        border: 2px outset var(--darkgrey);
+        border-top: 2px outset var(--lightgrey);
+        border-left: 2px outset var(--lightgrey);
+    }
+}
+
+.button-section {
+    display: flex;
+    
+    > * {
+        margin: 0.5rem 0.5%;
+        display: inline;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: larger;
+    }
+
+    p {
+        margin: auto;
+    }
+}
+
+
+.thirteen-grid {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0.1rem;
+    height: calc(100vw * 0.4);
+
+    .card-slot {
+        background-color: var(--shadedmoongreen);
+        border-radius: 0.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .selected {
+        background-color: rgb(255, 255, 255);
+        img {
+            width: calc(100% - 0.2rem);
+            margin: auto;
+        }
+    }
+
+    img {
+        width: calc(100% - 0.4rem);
+        border-radius: 0.2rem;
+        margin: 0.2rem
+    }
+}
+
+.dark {
+    background-color: rgb(41, 37, 37);
+    color: rgb(88, 139, 232);
+
+    .dim {
+        color: rgb(41, 37, 37);
+    }
+
+    .thirteen-grid  {
+
+        .card-slot {
+        background-color: rgb(50, 46, 46);
+        }
+
+        .selected {
+            background-color: rgb(255, 255, 255);
+        }
+    }
+}

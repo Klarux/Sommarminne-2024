@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solitaire stuff</title>
+    <script type="module" src="./thirteen-solitaire/main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Solitaire Game</h1>
+    </header>
+    <main>
+        <div class="dim hidden">
+            <section class="reset-popup hidden">
+                <h3>Are you sure?</h3>
+                <p>Resets can't be undone, you will lose all your progress and the current game will be lost forever.</p>
+                <button id="confirm-reset">Yes, Reset</button>
+                <button id="cancel">Cancel</button>
+            </section>
+            <section class="game-over-popup hidden">
+                <h3>You Won!!!</h3>
+                <p class="final-stats-output"></p>
+                <button id="play-again">Play Again</button>
+            </section>
+        </div>
+        <h2>Thirteen</h2>
+        <div class="button-section">
+            <button id="redistribute" disabled>Redistribute Cards</button>
+            <button id="reset" disabled>Reset Game</button>
+            <button id="undo" disabled>Undo</button>
+            <p class="move-output">Moves: 0</p>
+            <p class="reshuffle-output">Reshuffles: 0</p>
+            <button id="auto">Auto: Off</button>
+            <button id="dark-mode">Dark Mode: Off</button>
+        </div>
+        
+        <section class="thirteen-grid select-disabled">
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+            <div class="card-slot"></div>
+        </section>
+    </main>
+</body>
+</html>

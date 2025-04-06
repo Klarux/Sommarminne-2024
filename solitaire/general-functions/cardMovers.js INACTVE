@@ -1,0 +1,20 @@
+function moveCard(sourceSlot, targetSlot) {
+    targetSlot.append(sourceSlot.firstChild) //Adds selectedCard's image to targeted slot
+    sourceSlot.innerHTML = '' //Removes selectedCard's image
+}
+
+function undoMove() {
+    if (!moveHistory[0]) return console.log('Undo impossible, no previous moves')
+    const lastMove = moveHistory.pop()
+    //"Reversing" source and target since we want to move backwards
+    const undoSource = lastMove.target
+    const undoTarget = lastMove.source
+
+    moveCard(undoSource, undoTarget)  
+    
+    //Removing 1 from movecount
+    setMovesTo(moves - 1)
+    moveOutput.innerText = 'Moves: ' + moves
+}
+
+// DON'T EXPORT YET AS THESE ALREADY EXIST FOR 13 GAME
